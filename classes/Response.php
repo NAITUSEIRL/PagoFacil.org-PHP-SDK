@@ -47,18 +47,18 @@ class Response extends Transaccion {
     public $ct_accounting_date;
     public $ct_transaction_date;
 
-    function __construct($ct_order_id, $ct_token_tienda, $ct_monto, $ct_token_service, $ct_estado, $ct_authorization_code, $ct_payment_type_code, $card_number, $card_expiration_date, $shares_number, $accounting_date, $transaction_date) {
+    function __construct($ct_order_id, $ct_token_tienda, $ct_monto, $ct_token_service, $ct_estado, $ct_authorization_code, $ct_payment_type_code, $ct_card_number, $ct_card_expiration_date, $ct_shares_number, $ct_accounting_date, $ct_transaction_date) {
 
         parent::__construct($ct_order_id, $ct_token_tienda, $ct_monto, $ct_token_service);
         
         $this->ct_estado = $ct_estado;
         $this->ct_authorization_code = $ct_authorization_code;
         $this->ct_payment_type_code = $ct_payment_type_code;
-        $this->ct_card_number = $card_number;
-        $this->ct_card_expiration_date = $card_expiration_date;
-        $this->ct_shares_number = $shares_number;
-        $this->ct_accounting_date = $accounting_date;
-        $this->ct_transaction_date = $transaction_date;
+        $this->ct_card_number = $ct_card_number;
+        $this->ct_card_expiration_date = $ct_card_expiration_date;
+        $this->ct_shares_number = $ct_shares_number;
+        $this->ct_accounting_date = $ct_accounting_date;
+        $this->ct_transaction_date = $ct_transaction_date;
     }
 
     function getArray() {
@@ -69,7 +69,7 @@ class Response extends Transaccion {
             "ct_token_service" => $this->ct_token_service,
             "ct_estado" => $this->ct_estado,
             "ct_authorization_code" => $this->ct_authorization_code,
-            "ct_payment_type_code" => $this->ct_token_service,
+            "ct_payment_type_code" => $this->ct_payment_type_code,
             "ct_card_number" => $this->ct_card_number,
             "ct_card_expiration_date" => $this->ct_card_expiration_date,
             "ct_shares_number" => $this->ct_shares_number,
