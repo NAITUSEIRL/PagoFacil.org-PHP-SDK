@@ -48,10 +48,18 @@ class Response extends Transaccion {
     public $ct_accounting_date;
     public $ct_transaction_date;
 
-    function __construct($ct_order_id, $ct_token_tienda, $ct_monto, $ct_token_service, $ct_estado, $ct_authorization_code, $ct_payment_type_code, $ct_card_number, $ct_card_expiration_date, $ct_shares_number, $ct_accounting_date, $ct_transaction_date,$ct_order_id_mall) {
+    /*
+     * VALORES QUE PUEDE TENER EL ESTADO DE UNA ORDEN
+     */
+    public $COMPLETADA = "COMPLETADA";
+    public $FALLIDA = "FALLIDA";
+    public $ANULADA = "ANULADA";
+    public $PENDIENTE = "PENDIENTE";
+
+    function __construct($ct_order_id, $ct_token_tienda, $ct_monto, $ct_token_service, $ct_estado, $ct_authorization_code, $ct_payment_type_code, $ct_card_number, $ct_card_expiration_date, $ct_shares_number, $ct_accounting_date, $ct_transaction_date, $ct_order_id_mall) {
 
         parent::__construct($ct_order_id, $ct_token_tienda, $ct_monto, $ct_token_service);
-        
+
         $this->ct_estado = $ct_estado;
         $this->ct_authorization_code = $ct_authorization_code;
         $this->ct_payment_type_code = $ct_payment_type_code;
@@ -78,7 +86,6 @@ class Response extends Transaccion {
             "ct_accounting_date" => $this->ct_accounting_date,
             "ct_transaction_date" => $this->ct_transaction_date,
             "ct_ct_order_id_mall" => $this->ct_order_id_mall,
-            
         ];
 
         ksort($resultado);
