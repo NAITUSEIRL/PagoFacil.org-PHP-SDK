@@ -47,10 +47,10 @@ class Response extends Transaccion {
     public $ct_accounting_date;
     public $ct_transaction_date;
 
-    function __construct($ct_order_id, $ct_token_tienda, $ct_monto, $ct_token_service, $ct_firma, $ct_estado, $ct_authorization_code, $ct_payment_type_code, $card_number, $card_expiration_date, $shares_number, $accounting_date, $transaction_date) {
+    function __construct($ct_order_id, $ct_token_tienda, $ct_monto, $ct_token_service, $ct_estado, $ct_authorization_code, $ct_payment_type_code, $card_number, $card_expiration_date, $shares_number, $accounting_date, $transaction_date) {
 
         parent::__construct($ct_order_id, $ct_token_tienda, $ct_monto, $ct_token_service);
-        $this->ct_firma = $ct_firma;
+        
         $this->ct_estado = $ct_estado;
         $this->ct_authorization_code = $ct_authorization_code;
         $this->ct_payment_type_code = $ct_payment_type_code;
