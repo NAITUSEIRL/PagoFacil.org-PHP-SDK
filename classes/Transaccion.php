@@ -41,15 +41,17 @@ class Transaccion {
     public $ct_token_tienda;
     public $ct_monto;
     public $ct_token_service;
+    public $ct_email;
     public $ct_firma;
     //Esta es la variable con la que firmaremos el mensaje
     private $ct_token_secret;
 
-    function __construct($ct_order_id, $ct_token_tienda, $ct_monto, $ct_token_service) {
+    function __construct($ct_order_id, $ct_token_tienda, $ct_monto, $ct_token_service, $ct_email = NULL) {
         $this->ct_order_id = $ct_order_id;
         $this->ct_token_tienda = $ct_token_tienda;
         $this->ct_monto = $ct_monto;
         $this->ct_token_service = $ct_token_service;
+        $this->ct_email = $ct_email;
     }
 
     function setCt_token_secret($ct_token_secret) {
@@ -67,6 +69,7 @@ class Transaccion {
             "ct_order_id" => $this->ct_order_id,
             "ct_token_tienda" => $this->ct_token_tienda,
             "ct_monto" => $this->ct_monto,
+            "ct_email" => $this->ct_email,
             "ct_token_service" => $this->ct_token_service
         ];
 
@@ -98,7 +101,7 @@ class Transaccion {
         $resultado = "";
 
         foreach ($arreglo as $field => $value) {
-            $resultado.=$field . $value;
+            $resultado .= $field . $value;
         }
 
         return $resultado;
