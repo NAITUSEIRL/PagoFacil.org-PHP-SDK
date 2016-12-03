@@ -69,9 +69,14 @@ class Transaccion {
             "ct_order_id" => $this->ct_order_id,
             "ct_token_tienda" => $this->ct_token_tienda,
             "ct_monto" => $this->ct_monto,
-            "ct_email" => $this->ct_email,
             "ct_token_service" => $this->ct_token_service
         ];
+
+        if ($this->ct_email !== NULL) {
+            $resultado[] = [
+                "ct_email" => $this->ct_email,
+            ];
+        }
 
         ksort($resultado);
         return $resultado;
