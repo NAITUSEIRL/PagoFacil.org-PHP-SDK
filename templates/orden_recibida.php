@@ -18,7 +18,6 @@ switch ($fields["Tipo de Pago"]) {
         $fields["Tipo de Cuotas"] = "Sin interés";
         break;
 }
-\tbkaaswoogateway\classes\Logger::log_me_wp($fields);
 ?>
 <h2><?php echo "Detalles de la Transacción"; ?></h2>
 <table class="shop_table order_details">

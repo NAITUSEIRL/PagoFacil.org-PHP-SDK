@@ -52,14 +52,14 @@ class Resultado {
 
     public function pedidoRecibidoResponse() {
         $fields = $this->fields;
-        include '../templates/orden_recibida.php';
+        include __DIR__.'/../templates/orden_recibida.php';
     }
 
     public function pedidoFallido() {
         $order_id = $this->order_id;
         $order_id_mall = $this->order_id_mall;
 
-        include '../templates/orden_fallida.php';
+        include __DIR__.'/../templates/orden_fallida.php';
     }
 
     function setFields($fields) {
