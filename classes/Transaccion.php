@@ -73,9 +73,7 @@ class Transaccion {
         ];
 
         if ($this->ct_email !== NULL) {
-            $resultado[] = [
-                "ct_email" => $this->ct_email,
-            ];
+            $resultado["ct_email"] = $this->ct_email;
         }
 
         ksort($resultado);
