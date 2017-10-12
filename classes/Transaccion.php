@@ -79,9 +79,7 @@ class Transaccion {
         if ($this->ct_email !== NULL) {
             $resultado["ct_email"] = $this->ct_email;
         }
-        if ($this->ct_source !== NULL) {
-            $resultado["ct_cource"] = $this->ct_source;
-        }
+
 
         ksort($resultado);
         return $resultado;
