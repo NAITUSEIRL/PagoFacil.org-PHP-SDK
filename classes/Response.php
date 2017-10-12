@@ -86,6 +86,8 @@ class Response extends Transaccion {
             "ct_accounting_date" => $this->ct_accounting_date,
             "ct_transaction_date" => $this->ct_transaction_date,
             "ct_order_id_mall" => $this->ct_order_id_mall,
+            "ct_source" => $this->ct_source,
+            "ct_currency" => $this->ct_currency,
         ];
 
         ksort($resultado);

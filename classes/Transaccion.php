@@ -73,12 +73,14 @@ class Transaccion {
             "ct_token_tienda" => $this->ct_token_tienda,
             "ct_monto" => $this->ct_monto,
             "ct_token_service" => $this->ct_token_service,
-            "ct_currency" => $this->ct_currency,
-            "ct_source" => $this->ct_source
+            "ct_currency" => $this->ct_currency
         ];
 
         if ($this->ct_email !== NULL) {
             $resultado["ct_email"] = $this->ct_email;
+        }
+        if ($this->ct_source !== NULL) {
+            $resultado["ct_cource"] = $this->ct_source;
         }
 
         ksort($resultado);
@@ -114,7 +116,7 @@ class Transaccion {
 
         return $resultado;
     }
-    
+
     function setCt_source($ct_source) {
         $this->ct_source = $ct_source;
     }
@@ -122,7 +124,5 @@ class Transaccion {
     function setCt_currency($ct_currency) {
         $this->ct_currency = $ct_currency;
     }
-
-
 
 }
