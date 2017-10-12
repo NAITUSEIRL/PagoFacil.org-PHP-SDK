@@ -44,7 +44,7 @@ class Transaccion {
     public $ct_email;
     public $ct_firma;
     //Estas Variables están desde la version 0.2
-    public $ct_source = "WebPayPST";
+    public $ct_source;
     public $ct_currency = "CLP";
     //Esta es la variable con la que firmaremos el mensaje
     private $ct_token_secret;
