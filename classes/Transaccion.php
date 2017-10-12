@@ -43,6 +43,9 @@ class Transaccion {
     public $ct_token_service;
     public $ct_email;
     public $ct_firma;
+    //Estas Variables están desde la version 0.2
+    public $ct_source = "WebPayPST";
+    public $ct_currency = "CLP";
     //Esta es la variable con la que firmaremos el mensaje
     private $ct_token_secret;
 
@@ -69,7 +72,9 @@ class Transaccion {
             "ct_order_id" => $this->ct_order_id,
             "ct_token_tienda" => $this->ct_token_tienda,
             "ct_monto" => $this->ct_monto,
-            "ct_token_service" => $this->ct_token_service
+            "ct_token_service" => $this->ct_token_service,
+            "ct_currency" => $this->ct_currency,
+            "ct_source" => $this->ct_source
         ];
 
         if ($this->ct_email !== NULL) {
@@ -109,5 +114,15 @@ class Transaccion {
 
         return $resultado;
     }
+    
+    function setCt_source($ct_source) {
+        $this->ct_source = $ct_source;
+    }
+
+    function setCt_currency($ct_currency) {
+        $this->ct_currency = $ct_currency;
+    }
+
+
 
 }
