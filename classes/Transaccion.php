@@ -45,7 +45,7 @@ class Transaccion {
     public $ct_firma;
     //Estas Variables están desde la version 0.2
     public $ct_source;
-    public $ct_currency = "CLP";
+    public $ct_currency;
     //Esta es la variable con la que firmaremos el mensaje
     private $ct_token_secret;
 
@@ -73,11 +73,13 @@ class Transaccion {
             "ct_token_tienda" => $this->ct_token_tienda,
             "ct_monto" => $this->ct_monto,
             "ct_token_service" => $this->ct_token_service,
-            "ct_currency" => $this->ct_currency
         ];
 
         if ($this->ct_email !== NULL) {
             $resultado["ct_email"] = $this->ct_email;
+        }
+        if ($this->ct_currency !== NULL) {
+            $resultado["ct_currency"] = $this->ct_currency;
         }
 
 
