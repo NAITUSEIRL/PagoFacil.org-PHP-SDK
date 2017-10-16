@@ -45,7 +45,7 @@ class Transaccion {
     public $ct_firma;
     //Estas Variables están desde la version 0.2
     public $ct_source;
-    public $ct_currency;
+    public $ct_currency = "CLP";
     //Esta es la variable con la que firmaremos el mensaje
     private $ct_token_secret;
 
@@ -61,6 +61,9 @@ class Transaccion {
         $this->ct_token_secret = $ct_token_secret;
     }
 
+    /*
+     * La firma se agrega al arreglo una vez firmado.
+     */
     function getArrayResponse() {
         $arreglo = $this->getArray();
         $arreglo["ct_firma"] = $this->firmarArreglo($arreglo);
@@ -73,15 +76,9 @@ class Transaccion {
             "ct_token_tienda" => $this->ct_token_tienda,
             "ct_monto" => $this->ct_monto,
             "ct_token_service" => $this->ct_token_service,
+            "ct_email" => $this->ct_email,
+            "ct_currency" => $this->ct_currency
         ];
-
-        if ($this->ct_email !== NULL) {
-            $resultado["ct_email"] = $this->ct_email;
-        }
-        if ($this->ct_currency !== NULL) {
-            $resultado["ct_currency"] = $this->ct_currency;
-        }
-
 
         ksort($resultado);
         return $resultado;
@@ -124,5 +121,27 @@ class Transaccion {
     function setCt_currency($ct_currency) {
         $this->ct_currency = $ct_currency;
     }
+    
+    function setCt_order_id($ct_order_id) {
+        $this->ct_order_id = $ct_order_id;
+    }
+
+    function setCt_token_tienda($ct_token_tienda) {
+        $this->ct_token_tienda = $ct_token_tienda;
+    }
+
+    function setCt_monto($ct_monto) {
+        $this->ct_monto = $ct_monto;
+    }
+
+    function setCt_token_service($ct_token_service) {
+        $this->ct_token_service = $ct_token_service;
+    }
+
+    function setCt_email($ct_email) {
+        $this->ct_email = $ct_email;
+    }
+
+
 
 }
