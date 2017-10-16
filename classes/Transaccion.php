@@ -84,7 +84,7 @@ class Transaccion {
      */
 
     function getArrayResponse() {
-        $arreglo = $this->getArray();
+        $arreglo = $this->getVarsFromClass();
         $arreglo["ct_firma"] = $this->firmarArreglo($arreglo);
         return $arreglo;
     }
@@ -95,38 +95,18 @@ class Transaccion {
             "ct_token_tienda" => $this->ct_token_tienda,
             "ct_monto" => $this->ct_monto,
             "ct_token_service" => $this->ct_token_service,
-            "ct_email" => $this->ct_email,
-            "ct_currency" => $this->ct_currency,
-            "ct_api_version" => $this->ct_api_version
+            "ct_email" => $this->ct_email
         ];
 
         ksort($resultado);
         return $resultado;
     }
 
-    /**
-     * Firma el arreglo con los valores originales de las versiones anteriores.
-     * @return type
-     */
-    function getArrayLegacy() {
-        $resultado = [
-            "ct_order_id" => $this->ct_order_id,
-            "ct_token_tienda" => $this->ct_token_tienda,
-            "ct_monto" => $this->ct_monto,
-            "ct_token_service" => $this->ct_token_service,
-            "ct_email" => $this->ct_email,
-        ];
+     
 
-        ksort($resultado);
-        return $resultado;
-    }
+    function firmarArreglo($arreglo) {
 
-    function firmarArreglo($arreglo = null) {
-
-        if ($arreglo == null) {
-            $arreglo = $this->getVarsFromClass();
-        }
-
+   
         //Ordeno Arreglo
         ksort($arreglo);
         //Concateno Arreglo
@@ -143,8 +123,8 @@ class Transaccion {
     /**
      * Esta funcion retorna true si las firmas corresponden
      * Si no corresponden revisa de manera legacy.
-     * @param type $arreglo
-     * @param type $firma
+     * @param type $arreglo Arreglo con los valores de CTs, puede ser $_POST
+     * @param type $firma Con la cual se comparara
      * @return boolean
      */
     function firmarYComparar($arreglo, $firma) {
@@ -155,7 +135,7 @@ class Transaccion {
         if ($comparar == true) {
             return true;
         } else {
-            $legacyFirmado = $this->firmarArreglo($this->getArrayLegacy());
+            $legacyFirmado = $this->firmarArreglo($this->getArray());
             if ($this->compararFirmas($firma)) {
                 return true;
             } else {
