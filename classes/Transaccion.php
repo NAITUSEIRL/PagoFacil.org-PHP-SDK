@@ -50,12 +50,18 @@ class Transaccion {
     //Esta es la variable con la que firmaremos el mensaje
     private $ct_token_secret;
 
-    function __construct($ct_order_id, $ct_token_tienda, $ct_monto, $ct_token_service, $ct_email) {
+    function __construct($ct_order_id, $ct_token_tienda, $ct_monto, $ct_token_service, $ct_email, $extra = array()) {
         $this->ct_order_id = $ct_order_id;
         $this->ct_token_tienda = $ct_token_tienda;
         $this->ct_monto = $ct_monto;
         $this->ct_token_service = $ct_token_service;
         $this->ct_email = $ct_email;
+
+        foreach ($extra as $key => $value) {
+            if (property_exists(get_class(), $key)) {
+                $this->{$key} = $value;
+            }
+        }
     }
 
     function setCt_token_secret($ct_token_secret) {
