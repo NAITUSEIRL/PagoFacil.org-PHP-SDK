@@ -42,7 +42,7 @@ class Transaccion {
     public $ct_monto;
     public $ct_token_service;
     public $ct_email;
-    public $ct_firma;
+    private $ct_firma;
     //Estas Variables están desde la version 0.2
 
     public $ct_currency = "CLP";
@@ -50,6 +50,17 @@ class Transaccion {
     //Esta es la variable con la que firmaremos el mensaje
     private $ct_token_secret;
 
+    /**
+     * Este objeto crea una transaccion con la informacion básica.
+     * En caso de necesitar agregar más variables se recibe un arreglo "extra"
+     * el cual agregara el valor a las variables existentes.
+     * @param type $ct_order_id Número de orden.
+     * @param type $ct_token_tienda Número único de la orden. No es el id.
+     * @param type $ct_monto Monto relacionado a la transacción
+     * @param type $ct_token_service Monto relacionado al servicio en Pago Fácil
+     * @param type $ct_email Email del cliente que realiza la compra.
+     * @param type $extra Otras variables a ingresar
+     */
     function __construct($ct_order_id, $ct_token_tienda, $ct_monto, $ct_token_service, $ct_email, $extra = array()) {
         $this->ct_order_id = $ct_order_id;
         $this->ct_token_tienda = $ct_token_tienda;
@@ -110,7 +121,11 @@ class Transaccion {
         return $resultado;
     }
 
-    function firmarArreglo($arreglo) {
+    function firmarArreglo($arreglo = null) {
+
+        if ($arreglo == null) {
+            $arreglo = $this->getVarsFromClass();
+        }
 
         //Ordeno Arreglo
         ksort($arreglo);
@@ -166,6 +181,17 @@ class Transaccion {
             }
         }
         return $resultado;
+    }
+
+    /**
+     * Retorna las variables publicas del objeto.
+     * @return type
+     */
+    function getVarsFromClass() {
+
+        $variables = get_object_vars($this);
+
+        return $variables;
     }
 
     /**
