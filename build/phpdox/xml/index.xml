@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index xmlns="http://xml.phpdox.net/src" basedir="/home/ctala/REPOS/PagoFacil.org-PHP-SDK/classes">
+  <namespace name="ctala\transaccion\classes">
+    <class name="Transaccion" src="Transaccion.php" description="Description of Transaccion" xml="classes/ctala_transaccion_classes_Transaccion.xml"/>
+    <class name="Resultado" src="Resultado.php" description="Description of Resultado" xml="classes/ctala_transaccion_classes_Resultado.xml"/>
+    <class name="Response" src="Response.php" description="La Clase Response posee los mismos atributos de transacción más todos los necesarios de una transacción exitosa lo que no implica que lo sea." xml="classes/ctala_transaccion_classes_Response.xml"/>
+    <class name="Helper" src="Helper.php" description="Description of Helper" xml="classes/ctala_transaccion_classes_Helper.xml"/>
+  </namespace>
+</index>

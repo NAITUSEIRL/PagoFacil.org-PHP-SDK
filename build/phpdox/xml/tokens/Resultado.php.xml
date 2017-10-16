@@ -1,0 +1,458 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="/home/ctala/REPOS/PagoFacil.org-PHP-SDK/classes" file="Resultado.php" realpath="/home/ctala/REPOS/PagoFacil.org-PHP-SDK/classes/Resultado.php" size="1874" time="2017-10-12T15:05:58+00:00" unixtime="1507820758" sha1="229f538d90220a2d235a24273066b69d10043cc8" relative="Resultado.php"/>
+  <line no="1">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="2"/>
+  <line no="3">
+    <token name="T_COMMENT">/*</token>
+  </line>
+  <line no="4">
+    <token name="T_COMMENT"> * To change this license header, choose License Headers in Project Properties.</token>
+  </line>
+  <line no="5">
+    <token name="T_COMMENT"> * To change this template file, choose Tools | Templates</token>
+  </line>
+  <line no="6">
+    <token name="T_COMMENT"> * and open the template in the editor.</token>
+  </line>
+  <line no="7">
+    <token name="T_COMMENT"> */</token>
+  </line>
+  <line no="8"/>
+  <line no="9">
+    <token name="T_NAMESPACE">namespace</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">ctala</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">transaccion</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">classes</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="10"/>
+  <line no="11">
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="12">
+    <token name="T_DOC_COMMENT"> * Description of Resultado</token>
+  </line>
+  <line no="13">
+    <token name="T_DOC_COMMENT"> *</token>
+  </line>
+  <line no="14">
+    <token name="T_DOC_COMMENT"> * @author ctala</token>
+  </line>
+  <line no="15">
+    <token name="T_DOC_COMMENT"> */</token>
+  </line>
+  <line no="16">
+    <token name="T_CLASS">class</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Resultado</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="17">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_COMMENT">/* @var $response Response */</token>
+  </line>
+  <line no="18"/>
+  <line no="19">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PUBLIC">public</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$response</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="20">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PUBLIC">public</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$order_id</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="21">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PUBLIC">public</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$order_id_mall</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="22">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PUBLIC">public</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$fields</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="23"/>
+  <line no="24">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">__construct</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="25">
+    <token name="T_WHITESPACE">        </token>
+  </line>
+  <line no="26">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="27"/>
+  <line no="28">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">setResponse</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$response</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="29">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">response</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$response</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="30">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">fields</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_ARRAY">array</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+  </line>
+  <line no="31">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"Orden de compra Mall"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_DOUBLE_ARROW">=&gt;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">response</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">ct_order_id_mall</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+  </line>
+  <line no="32">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"C&#xF3;digo de autorizaci&#xF3;n"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_DOUBLE_ARROW">=&gt;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">response</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">ct_authorization_code</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+  </line>
+  <line no="33">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"Tipo de Pago"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_DOUBLE_ARROW">=&gt;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">response</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">ct_payment_type_code</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+  </line>
+  <line no="34">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"Monto"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_DOUBLE_ARROW">=&gt;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">response</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">ct_monto</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+  </line>
+  <line no="35">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"Final Tarjeta"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_DOUBLE_ARROW">=&gt;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">response</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">ct_shares_number</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+  </line>
+  <line no="36">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"Cuotas"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_DOUBLE_ARROW">=&gt;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">response</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">ct_shares_number</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+  </line>
+  <line no="37">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"Fecha Contable"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_DOUBLE_ARROW">=&gt;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">response</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">ct_accounting_date</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+  </line>
+  <line no="38">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"Fecha Transacci&#xF3;n"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_DOUBLE_ARROW">=&gt;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">response</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">ct_transaction_date</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+  </line>
+  <line no="39">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="40">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">setOrder_id</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">response</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">ct_order_id</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="41">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">setOrder_id_mall</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">response</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">ct_order_id_mall</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="42">
+    <token name="T_WHITESPACE">        </token>
+  </line>
+  <line no="43">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="44"/>
+  <line no="45">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">setOrder_id</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$order_id</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="46">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">order_id</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$order_id</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="47">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="48"/>
+  <line no="49">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">setOrder_id_mall</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$order_id_mall</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="50">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">order_id_mall</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$order_id_mall</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="51">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="52"/>
+  <line no="53">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PUBLIC">public</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">pedidoRecibidoResponse</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="54">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$fields</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">fields</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="55">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_INCLUDE">include</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_DIR">__DIR__</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'/../templates/orden_recibida.php'</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="56">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="57"/>
+  <line no="58">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PUBLIC">public</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">pedidoFallido</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="59">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$order_id</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">order_id</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="60">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$order_id_mall</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">order_id_mall</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="61"/>
+  <line no="62">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_INCLUDE">include</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_DIR">__DIR__</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'/../templates/orden_fallida.php'</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="63">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="64"/>
+  <line no="65">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">setFields</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$fields</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="66">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">fields</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$fields</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="67">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="68"/>
+  <line no="69">
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="70"/>
+</source>

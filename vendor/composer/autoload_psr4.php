@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'ctala\\transaccion\\' => array($baseDir . '/'),
+    'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
 );

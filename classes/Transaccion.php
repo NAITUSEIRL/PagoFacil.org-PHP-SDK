@@ -44,12 +44,13 @@ class Transaccion {
     public $ct_email;
     public $ct_firma;
     //Estas Variables están desde la version 0.2
-    public $ct_source;
+
     public $ct_currency = "CLP";
+    public $ct_api_version = "0.2";
     //Esta es la variable con la que firmaremos el mensaje
     private $ct_token_secret;
 
-    function __construct($ct_order_id, $ct_token_tienda, $ct_monto, $ct_token_service, $ct_email = NULL) {
+    function __construct($ct_order_id, $ct_token_tienda, $ct_monto, $ct_token_service, $ct_email) {
         $this->ct_order_id = $ct_order_id;
         $this->ct_token_tienda = $ct_token_tienda;
         $this->ct_monto = $ct_monto;
@@ -64,6 +65,7 @@ class Transaccion {
     /*
      * La firma se agrega al arreglo una vez firmado.
      */
+
     function getArrayResponse() {
         $arreglo = $this->getArray();
         $arreglo["ct_firma"] = $this->firmarArreglo($arreglo);
@@ -77,7 +79,25 @@ class Transaccion {
             "ct_monto" => $this->ct_monto,
             "ct_token_service" => $this->ct_token_service,
             "ct_email" => $this->ct_email,
-            "ct_currency" => $this->ct_currency
+            "ct_currency" => $this->ct_currency,
+            "ct_api_version" => $this->ct_api_version
+        ];
+
+        ksort($resultado);
+        return $resultado;
+    }
+
+    /**
+     * Firma el arreglo con los valores originales de las versiones anteriores.
+     * @return type
+     */
+    function getArrayLegacy() {
+        $resultado = [
+            "ct_order_id" => $this->ct_order_id,
+            "ct_token_tienda" => $this->ct_token_tienda,
+            "ct_monto" => $this->ct_monto,
+            "ct_token_service" => $this->ct_token_service,
+            "ct_email" => $this->ct_email,
         ];
 
         ksort($resultado);
@@ -97,6 +117,61 @@ class Transaccion {
         //Guardo y retorno el mensaje firmado
         $this->ct_firma = $mensajeFirmado;
         return $mensajeFirmado;
+    }
+
+    /**
+     * Esta funcion retorna true si las firmas corresponden
+     * Si no corresponden revisa de manera legacy.
+     * @param type $arreglo
+     * @param type $firma
+     * @return boolean
+     */
+    function firmarYComparar($arreglo, $firma) {
+        $arregloFiltrado = $this->getCTs($arreglo);
+        $arregloFirmado = $this->firmarArreglo($arregloFiltrado);
+        $comparar = $this->compararFirmas($firma);
+
+        if ($comparar == true) {
+            return true;
+        } else {
+            $legacyFirmado = $this->firmarArreglo($this->getArrayLegacy());
+            if ($this->compararFirmas($firma)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+    /**
+     * Retorna arreglo basado en todas las variables que parten con CT
+     * excepto la firma
+     * @param type $array
+     * @return type
+     */
+    function getCTs($array) {
+        $resultado = array();
+        //Se obtienen solo los datos que inician en ct_
+        foreach ($array as $key => $value) {
+            if (!substr_compare("ct_", $key, 0, 3)) {
+                if ($key != "ct_firma") {
+                    $resultado[$key] = $value;
+                }
+            }
+        }
+        return $resultado;
+    }
+
+    /**
+     * 
+     * @param type $firmaAComparar Firma que debe de corresponder.
+     */
+    function compararFirmas($firmaAComparar) {
+        if ($this->ct_firma == $firmaAComparar) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     function firmarMensaje($mensaje, $claveCifrado) {
@@ -121,7 +196,7 @@ class Transaccion {
     function setCt_currency($ct_currency) {
         $this->ct_currency = $ct_currency;
     }
-    
+
     function setCt_order_id($ct_order_id) {
         $this->ct_order_id = $ct_order_id;
     }
@@ -141,7 +216,5 @@ class Transaccion {
     function setCt_email($ct_email) {
         $this->ct_email = $ct_email;
     }
-
-
 
 }

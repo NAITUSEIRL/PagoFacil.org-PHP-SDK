@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="ctala\transaccion\classes\Helper" namespace="ctala\transaccion\classes" name="Helper" abstract="false" final="false" start="10" end="47">
+  <file path="/home/ctala/REPOS/PagoFacil.org-PHP-SDK/classes" file="Helper.php" realpath="/home/ctala/REPOS/PagoFacil.org-PHP-SDK/classes/Helper.php" size="1353" time="2017-10-12T15:05:58+00:00" unixtime="1507820758" sha1="70f28ccd1ad50584490abd2c3325e8012847ccb9" relative="Helper.php"/>
+  <docblock>
+    <description compact="Description of Helper"/>
+    <author value="ctala"/>
+  </docblock>
+  <method name="redirect" start="18" end="45" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Esta función permite la redirección para los pagos."/>
+      <param type="object" variable="$url">
+        <type full="ctala\transaccion\classes\type" namespace="ctala\transaccion\classes" name="type"/>
+      </param>
+      <param type="object" variable="$variables">
+        <type full="ctala\transaccion\classes\type" namespace="ctala\transaccion\classes" name="type"/>
+      </param>
+    </docblock>
+    <parameter name="url" byreference="false" type="{unknown}"/>
+    <parameter name="variables" byreference="false" type="{unknown}"/>
+  </method>
+</class>

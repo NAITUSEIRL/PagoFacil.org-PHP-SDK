@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<source xmlns="http://xml.phpdox.net/src">
+  <dir name="/home/ctala/REPOS/PagoFacil.org-PHP-SDK/classes">
+    <file name="Transaccion.php" size="6443" time="2017-10-16T12:39:59+00:00" unixtime="1508157599" sha1="09f7cf71f9cd1308058d62c308fb895f235fe86b" xml="tokens/Transaccion.php.xml"/>
+    <file name="Resultado.php" size="1874" time="2017-10-12T15:05:58+00:00" unixtime="1507820758" sha1="229f538d90220a2d235a24273066b69d10043cc8" xml="tokens/Resultado.php.xml"/>
+    <file name="Response.php" size="3975" time="2017-10-16T12:35:56+00:00" unixtime="1508157356" sha1="24697b689a400156faef1109d0b3c780737e496e" xml="tokens/Response.php.xml"/>
+    <file name="Helper.php" size="1353" time="2017-10-12T15:05:58+00:00" unixtime="1507820758" sha1="70f28ccd1ad50584490abd2c3325e8012847ccb9" xml="tokens/Helper.php.xml"/>
+  </dir>
+</source>

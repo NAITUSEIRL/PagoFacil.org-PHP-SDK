@@ -47,6 +47,9 @@ class Response extends Transaccion {
     public $ct_shares_number;
     public $ct_accounting_date;
     public $ct_transaction_date;
+    
+    //Estas Variables están desde la version 0.2
+    public $ct_source;
 
     /*
      * VALORES QUE PUEDE TENER EL ESTADO DE UNA ORDEN

@@ -16,5 +16,8 @@
         "psr-4": {
             "ctala\\transaccion\\": ""
         }
+    },
+    "require-dev": {
+        "theseer/phpdox": "^0.10.1"
     }
 }

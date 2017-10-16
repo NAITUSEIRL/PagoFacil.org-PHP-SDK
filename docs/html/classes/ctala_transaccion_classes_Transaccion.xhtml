@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - ctala\transaccion\classes\Transaccion</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#ctala_transaccion_classes">ctala\transaccion\classes</a>
+          </li>
+          <li class="separator">Transaccion</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/Transaccion.php.xhtml#line34">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>ctala\transaccion\classes\</small>Transaccion</h1>
+        <h4>Description of Transaccion</h4>
+        <p/>
+        <ul>
+          <li>Author: ctala</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Transaccion
+            {<br/><ul class="none"><li>// members</li><li>public  <a href="#members">$ct_order_id</a>;
+                    </li><li>public  <a href="#members">$ct_token_tienda</a>;
+                    </li><li>public  <a href="#members">$ct_monto</a>;
+                    </li><li>public  <a href="#members">$ct_token_service</a>;
+                    </li><li>public  <a href="#members">$ct_email</a>;
+                    </li><li>public  <a href="#members">$ct_firma</a>;
+                    </li><li>public string <a href="#members">$ct_currency</a> =
+                        "CLP";
+                    </li><li>public string <a href="#members">$ct_api_version</a> =
+                        "0.2";
+                    </li><li>private  <a href="#members">$ct_token_secret</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/setCt_token_secret.xhtml">setCt_token_secret</a>()
+                    </li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/getArrayResponse.xhtml">getArrayResponse</a>()
+                    </li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/getArray.xhtml">getArray</a>()
+                    </li><li>public type <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/getArrayLegacy.xhtml">getArrayLegacy</a>()
+                    </li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/firmarArreglo.xhtml">firmarArreglo</a>()
+                    </li><li>public boolean <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/firmarYComparar.xhtml">firmarYComparar</a>()
+                    </li><li>public type <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/getCTs.xhtml">getCTs</a>()
+                    </li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/compararFirmas.xhtml">compararFirmas</a>()
+                    </li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/firmarMensaje.xhtml">firmarMensaje</a>()
+                    </li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/concatenarArreglo.xhtml">concatenarArreglo</a>()
+                    </li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/setCt_source.xhtml">setCt_source</a>()
+                    </li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/setCt_currency.xhtml">setCt_currency</a>()
+                    </li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/setCt_order_id.xhtml">setCt_order_id</a>()
+                    </li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/setCt_token_tienda.xhtml">setCt_token_tienda</a>()
+                    </li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/setCt_monto.xhtml">setCt_monto</a>()
+                    </li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/setCt_token_service.xhtml">setCt_token_service</a>()
+                    </li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/setCt_email.xhtml">setCt_email</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="ct_token_secret">
+              <strong>$ct_token_secret</strong>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="ct_api_version">
+              <strong>$ct_api_version</strong>
+            </li>
+            <li id="ct_currency">
+              <strong>$ct_currency</strong>
+            </li>
+            <li id="ct_email">
+              <strong>$ct_email</strong>
+            </li>
+            <li id="ct_firma">
+              <strong>$ct_firma</strong>
+            </li>
+            <li id="ct_monto">
+              <strong>$ct_monto</strong>
+            </li>
+            <li id="ct_order_id">
+              <strong>$ct_order_id</strong>
+            </li>
+            <li id="ct_token_service">
+              <strong>$ct_token_service</strong>
+            </li>
+            <li id="ct_token_tienda">
+              <strong>$ct_token_tienda</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/__construct.xhtml">__construct()</a>
+            </li>
+            <li id="compararFirmas">
+              <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/compararFirmas.xhtml">compararFirmas()</a>
+            </li>
+            <li id="concatenarArreglo">
+              <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/concatenarArreglo.xhtml">concatenarArreglo()</a>
+            </li>
+            <li id="firmarArreglo">
+              <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/firmarArreglo.xhtml">firmarArreglo()</a>
+            </li>
+            <li id="firmarMensaje">
+              <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/firmarMensaje.xhtml">firmarMensaje()</a>
+            </li>
+            <li id="firmarYComparar"><a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/firmarYComparar.xhtml">firmarYComparar()</a>
+                — Esta funcion retorna true si las firmas corresponden Si no corresponden revisa de manera legacy.</li>
+            <li id="getArray">
+              <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/getArray.xhtml">getArray()</a>
+            </li>
+            <li id="getArrayLegacy"><a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/getArrayLegacy.xhtml">getArrayLegacy()</a>
+                — Firma el arreglo con los valores originales de las versiones anteriores.</li>
+            <li id="getArrayResponse">
+              <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/getArrayResponse.xhtml">getArrayResponse()</a>
+            </li>
+            <li id="getCTs"><a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/getCTs.xhtml">getCTs()</a>
+                — Retorna arreglo basado en todas las variables que parten con CT excepto la firma</li>
+            <li id="setCt_currency">
+              <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/setCt_currency.xhtml">setCt_currency()</a>
+            </li>
+            <li id="setCt_email">
+              <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/setCt_email.xhtml">setCt_email()</a>
+            </li>
+            <li id="setCt_monto">
+              <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/setCt_monto.xhtml">setCt_monto()</a>
+            </li>
+            <li id="setCt_order_id">
+              <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/setCt_order_id.xhtml">setCt_order_id()</a>
+            </li>
+            <li id="setCt_source">
+              <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/setCt_source.xhtml">setCt_source()</a>
+            </li>
+            <li id="setCt_token_secret">
+              <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/setCt_token_secret.xhtml">setCt_token_secret()</a>
+            </li>
+            <li id="setCt_token_service">
+              <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/setCt_token_service.xhtml">setCt_token_service()</a>
+            </li>
+            <li id="setCt_token_tienda">
+              <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/setCt_token_tienda.xhtml">setCt_token_tienda()</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.11.0-dev - Copyright (C) 2010 - 2017 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>

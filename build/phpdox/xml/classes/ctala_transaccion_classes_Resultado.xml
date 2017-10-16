@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="ctala\transaccion\classes\Resultado" namespace="ctala\transaccion\classes" name="Resultado" abstract="false" final="false" start="16" end="69">
+  <file path="/home/ctala/REPOS/PagoFacil.org-PHP-SDK/classes" file="Resultado.php" realpath="/home/ctala/REPOS/PagoFacil.org-PHP-SDK/classes/Resultado.php" size="1874" time="2017-10-12T15:05:58+00:00" unixtime="1507820758" sha1="229f538d90220a2d235a24273066b69d10043cc8" relative="Resultado.php"/>
+  <docblock>
+    <description compact="Description of Resultado"/>
+    <author value="ctala"/>
+  </docblock>
+  <member name="response" visibility="public" static="false" line="19"/>
+  <member name="order_id" visibility="public" static="false" line="20"/>
+  <member name="order_id_mall" visibility="public" static="false" line="21"/>
+  <member name="fields" visibility="public" static="false" line="22"/>
+  <constructor name="__construct" start="24" end="26" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="setResponse" start="28" end="43" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="response" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="setOrder_id" start="45" end="47" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="order_id" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="setOrder_id_mall" start="49" end="51" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="order_id_mall" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="pedidoRecibidoResponse" start="53" end="56" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="pedidoFallido" start="58" end="63" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="setFields" start="65" end="67" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="fields" byreference="false" type="{unknown}"/>
+  </method>
+</class>

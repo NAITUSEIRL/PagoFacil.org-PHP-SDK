@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="ctala\transaccion\classes\Transaccion" namespace="ctala\transaccion\classes" name="Transaccion" abstract="false" final="false" start="34" end="220">
+  <file path="/home/ctala/REPOS/PagoFacil.org-PHP-SDK/classes" file="Transaccion.php" realpath="/home/ctala/REPOS/PagoFacil.org-PHP-SDK/classes/Transaccion.php" size="6443" time="2017-10-16T12:39:59+00:00" unixtime="1508157599" sha1="09f7cf71f9cd1308058d62c308fb895f235fe86b" relative="Transaccion.php"/>
+  <docblock>
+    <description compact="Description of Transaccion"/>
+    <author value="ctala"/>
+  </docblock>
+  <member name="ct_order_id" visibility="public" static="false" line="39"/>
+  <member name="ct_token_tienda" visibility="public" static="false" line="41"/>
+  <member name="ct_monto" visibility="public" static="false" line="42"/>
+  <member name="ct_token_service" visibility="public" static="false" line="43"/>
+  <member name="ct_email" visibility="public" static="false" line="44"/>
+  <member name="ct_firma" visibility="public" static="false" line="45"/>
+  <member name="ct_currency" default="&quot;CLP&quot;" type="string" visibility="public" static="false" line="48"/>
+  <member name="ct_api_version" default="&quot;0.2&quot;" type="string" visibility="public" static="false" line="49"/>
+  <member name="ct_token_secret" visibility="private" static="false" line="51"/>
+  <constructor name="__construct" start="53" end="59" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="ct_order_id" byreference="false" type="{unknown}"/>
+    <parameter name="ct_token_tienda" byreference="false" type="{unknown}"/>
+    <parameter name="ct_monto" byreference="false" type="{unknown}"/>
+    <parameter name="ct_token_service" byreference="false" type="{unknown}"/>
+    <parameter name="ct_email" byreference="false" type="{unknown}"/>
+  </constructor>
+  <method name="setCt_token_secret" start="61" end="63" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="ct_token_secret" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getArrayResponse" start="69" end="73" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="getArray" start="75" end="88" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="getArrayLegacy" start="94" end="105" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Firma el arreglo con los valores originales de las versiones anteriores."/>
+      <return type="object">
+        <type full="ctala\transaccion\classes\type" namespace="ctala\transaccion\classes" name="type"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="firmarArreglo" start="107" end="120" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="arreglo" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="Ordeno Arreglo" line="109"/>
+      <comment value="Concateno Arreglo" line="111"/>
+      <comment value="Firmo Mensaje" line="114"/>
+      <comment value="Guardo y retorno el mensaje firmado" line="117"/>
+    </inline>
+  </method>
+  <method name="firmarYComparar" start="129" end="144" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Esta funcion retorna true si las firmas corresponden Si no corresponden revisa de manera legacy."/>
+      <param type="object" variable="$arreglo">
+        <type full="ctala\transaccion\classes\type" namespace="ctala\transaccion\classes" name="type"/>
+      </param>
+      <param type="object" variable="$firma">
+        <type full="ctala\transaccion\classes\type" namespace="ctala\transaccion\classes" name="type"/>
+      </param>
+      <return type="boolean"/>
+    </docblock>
+    <parameter name="arreglo" byreference="false" type="{unknown}"/>
+    <parameter name="firma" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getCTs" start="152" end="163" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Retorna arreglo basado en todas las variables que parten con CT excepto la firma"/>
+      <param type="object" variable="$array">
+        <type full="ctala\transaccion\classes\type" namespace="ctala\transaccion\classes" name="type"/>
+      </param>
+      <return type="object">
+        <type full="ctala\transaccion\classes\type" namespace="ctala\transaccion\classes" name="type"/>
+      </return>
+    </docblock>
+    <parameter name="array" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="Se obtienen solo los datos que inician en ct_" line="154"/>
+    </inline>
+  </method>
+  <method name="compararFirmas" start="169" end="175" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param description="Firma que debe de corresponder." type="object" variable="$firmaAComparar">
+        <type full="ctala\transaccion\classes\type" namespace="ctala\transaccion\classes" name="type"/>
+      </param>
+    </docblock>
+    <parameter name="firmaAComparar" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="firmarMensaje" start="177" end="180" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="mensaje" byreference="false" type="{unknown}"/>
+    <parameter name="claveCifrado" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="concatenarArreglo" start="182" end="190" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="arreglo" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="setCt_source" start="192" end="194" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="ct_source" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="setCt_currency" start="196" end="198" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="ct_currency" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="setCt_order_id" start="200" end="202" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="ct_order_id" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="setCt_token_tienda" start="204" end="206" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="ct_token_tienda" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="setCt_monto" start="208" end="210" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="ct_monto" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="setCt_token_service" start="212" end="214" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="ct_token_service" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="setCt_email" start="216" end="218" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="ct_email" byreference="false" type="{unknown}"/>
+  </method>
+  <extenders>
+    <extender full="ctala\transaccion\classes\Response" namespace="ctala\transaccion\classes" name="Response"/>
+  </extenders>
+</class>
