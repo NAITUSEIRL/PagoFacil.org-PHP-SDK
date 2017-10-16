@@ -68,7 +68,12 @@ class Transaccion {
         $this->ct_token_service = $ct_token_service;
         $this->ct_email = $ct_email;
 
-        foreach ($extra as $key => $value) {
+        $this->addExtras($extra);
+    }
+
+    function addExtras($extras = array()) {
+        $filteredExtras = $this->getCTs($extras);
+        foreach ($filteredExtras as $key => $value) {
             if (property_exists(get_class(), $key)) {
                 $this->{$key} = $value;
             }
