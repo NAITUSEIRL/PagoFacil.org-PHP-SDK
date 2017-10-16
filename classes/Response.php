@@ -47,7 +47,6 @@ class Response extends Transaccion {
     public $ct_shares_number;
     public $ct_accounting_date;
     public $ct_transaction_date;
-    
     //Estas Variables están desde la version 0.2
     public $ct_source;
 
@@ -59,9 +58,9 @@ class Response extends Transaccion {
     public $ANULADA = "ANULADA";
     public $PENDIENTE = "PENDIENTE";
 
-    function __construct($ct_order_id, $ct_token_tienda, $ct_monto, $ct_token_service, $ct_estado, $ct_authorization_code, $ct_payment_type_code, $ct_card_number, $ct_card_expiration_date, $ct_shares_number, $ct_accounting_date, $ct_transaction_date, $ct_order_id_mall) {
+    function __construct($ct_order_id = null, $ct_token_tienda = null, $ct_monto = null, $ct_token_service = null, $ct_estado = null, $ct_authorization_code = null, $ct_payment_type_code = null, $ct_card_number = null, $ct_card_expiration_date = null, $ct_shares_number = null, $ct_accounting_date = null, $ct_transaction_date = null, $ct_order_id_mall = null, $extras = array()) {
 
-        parent::__construct($ct_order_id, $ct_token_tienda, $ct_monto, $ct_token_service);
+        parent::__construct($ct_order_id, $ct_token_tienda, $ct_monto, $ct_token_service, null, $extras);
 
         $this->ct_estado = $ct_estado;
         $this->ct_authorization_code = $ct_authorization_code;
