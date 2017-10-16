@@ -102,11 +102,9 @@ class Transaccion {
         return $resultado;
     }
 
-     
-
     function firmarArreglo($arreglo) {
 
-   
+
         //Ordeno Arreglo
         ksort($arreglo);
         //Concateno Arreglo
@@ -170,6 +168,8 @@ class Transaccion {
     function getVarsFromClass() {
 
         $variables = get_object_vars($this);
+        unset($variables["ct_token_secret"]);
+        unset($variables["ct_firma"]);
 
         return $variables;
     }

@@ -74,7 +74,7 @@
                     </li><li>public  <a href="#members">$ct_monto</a>;
                     </li><li>public  <a href="#members">$ct_token_service</a>;
                     </li><li>public  <a href="#members">$ct_email</a>;
-                    </li><li>public  <a href="#members">$ct_firma</a>;
+                    </li><li>private  <a href="#members">$ct_firma</a>;
                     </li><li>public string <a href="#members">$ct_currency</a> =
                         "CLP";
                     </li><li>public string <a href="#members">$ct_api_version</a> =
@@ -84,10 +84,10 @@
                     </li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/setCt_token_secret.xhtml">setCt_token_secret</a>()
                     </li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/getArrayResponse.xhtml">getArrayResponse</a>()
                     </li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/getArray.xhtml">getArray</a>()
-                    </li><li>public type <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/getArrayLegacy.xhtml">getArrayLegacy</a>()
                     </li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/firmarArreglo.xhtml">firmarArreglo</a>()
                     </li><li>public boolean <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/firmarYComparar.xhtml">firmarYComparar</a>()
                     </li><li>public type <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/getCTs.xhtml">getCTs</a>()
+                    </li><li>public type <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/getVarsFromClass.xhtml">getVarsFromClass</a>()
                     </li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/compararFirmas.xhtml">compararFirmas</a>()
                     </li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/firmarMensaje.xhtml">firmarMensaje</a>()
                     </li><li>public void <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/concatenarArreglo.xhtml">concatenarArreglo</a>()
@@ -105,6 +105,9 @@
         <div class="styled members">
           <h4>private</h4>
           <ul class="members">
+            <li id="ct_firma">
+              <strong>$ct_firma</strong>
+            </li>
             <li id="ct_token_secret">
               <strong>$ct_token_secret</strong>
             </li>
@@ -119,9 +122,6 @@
             </li>
             <li id="ct_email">
               <strong>$ct_email</strong>
-            </li>
-            <li id="ct_firma">
-              <strong>$ct_firma</strong>
             </li>
             <li id="ct_monto">
               <strong>$ct_monto</strong>
@@ -141,9 +141,8 @@
         <div class="styled">
           <h4>public</h4>
           <ul>
-            <li id="__construct">
-              <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/__construct.xhtml">__construct()</a>
-            </li>
+            <li id="__construct"><a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/__construct.xhtml">__construct()</a>
+                — Este objeto crea una transaccion con la informacion básica.</li>
             <li id="compararFirmas">
               <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/compararFirmas.xhtml">compararFirmas()</a>
             </li>
@@ -161,13 +160,13 @@
             <li id="getArray">
               <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/getArray.xhtml">getArray()</a>
             </li>
-            <li id="getArrayLegacy"><a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/getArrayLegacy.xhtml">getArrayLegacy()</a>
-                — Firma el arreglo con los valores originales de las versiones anteriores.</li>
             <li id="getArrayResponse">
               <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/getArrayResponse.xhtml">getArrayResponse()</a>
             </li>
             <li id="getCTs"><a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/getCTs.xhtml">getCTs()</a>
                 — Retorna arreglo basado en todas las variables que parten con CT excepto la firma</li>
+            <li id="getVarsFromClass"><a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/getVarsFromClass.xhtml">getVarsFromClass()</a>
+                — Retorna las variables publicas del objeto.</li>
             <li id="setCt_currency">
               <a title="ctala\transaccion\classes\Transaccion" href="../classes/ctala_transaccion_classes_Transaccion/setCt_currency.xhtml">setCt_currency()</a>
             </li>

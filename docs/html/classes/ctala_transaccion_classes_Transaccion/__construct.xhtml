@@ -56,50 +56,58 @@
             <a href="#parameter">Parameter</a>
           </li>
           <li>
-            <a href="../../source/Transaccion.php.xhtml#line53">Source</a>
+            <a href="../../source/Transaccion.php.xhtml#line64">Source</a>
           </li>
         </ul>
       </nav>
       <section>
         <h1><small>ctala\transaccion\classes\Transaccion::</small>__construct</h1>
-        <h4/>
-        <p/>
+        <h4>Este objeto crea una transaccion con la informacion básica.</h4>
+        <p>En caso de necesitar agregar más variables se recibe un arreglo "extra"
+el cual agregara el valor a las variables existentes.</p>
+        <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
-          <code>public function __construct(
+          <code>public function __construct(<a title="ctala\transaccion\classes\type" href="../../classes/ctala_transaccion_classes_type.xhtml">type</a>
         $ct_order_id,
-            
+            <a title="ctala\transaccion\classes\type" href="../../classes/ctala_transaccion_classes_type.xhtml">type</a>
         $ct_token_tienda,
-            
+            <a title="ctala\transaccion\classes\type" href="../../classes/ctala_transaccion_classes_type.xhtml">type</a>
         $ct_monto,
-            
+            <a title="ctala\transaccion\classes\type" href="../../classes/ctala_transaccion_classes_type.xhtml">type</a>
         $ct_token_service,
-            
-        $ct_email )
+            <a title="ctala\transaccion\classes\type" href="../../classes/ctala_transaccion_classes_type.xhtml">type</a>
+        $ct_email,
+            [array
+        $extra = ] )
             </code>
         </div>
         <h2 id="parameterlist">Parameters</h2>
         <dl class="styled">
           <dt><code>$ct_order_id</code>
                 —
-                </dt>
-          <dd/>
+                object</dt>
+          <dd>Número de orden.<br/><br/><br/>      </dd>
           <dt><code>$ct_token_tienda</code>
                 —
-                </dt>
-          <dd/>
+                object</dt>
+          <dd>Número único de la orden. No es el id.<br/><br/><br/>      </dd>
           <dt><code>$ct_monto</code>
                 —
-                </dt>
-          <dd/>
+                object</dt>
+          <dd>Monto relacionado a la transacción<br/><br/><br/>      </dd>
           <dt><code>$ct_token_service</code>
                 —
-                </dt>
-          <dd/>
+                object</dt>
+          <dd>Monto relacionado al servicio en Pago Fácil<br/><br/><br/>      </dd>
           <dt><code>$ct_email</code>
                 —
-                </dt>
-          <dd/>
+                object</dt>
+          <dd>Email del cliente que realiza la compra.<br/><br/><br/>      </dd>
+          <dt><code>$extra</code>
+                —
+                array</dt>
+          <dd>Otras variables a ingresar<br/><br/><br/>      </dd>
         </dl>
       </section>
     </div>
