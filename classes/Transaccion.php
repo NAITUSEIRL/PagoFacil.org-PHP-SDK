@@ -130,15 +130,15 @@ class Transaccion {
      * @param type $firma Con la cual se comparara
      * @return boolean
      */
-    function firmarYComparar($arreglo, $firma) {
-        $arregloFiltrado = $this->getCTs($arreglo);
-        $arregloFirmado = $this->firmarArreglo($arregloFiltrado);
+    function firmarYComparar($firma) {
+        $arregloFiltrado = $this->getArrayResponse();
         $comparar = $this->compararFirmas($firma);
 
         if ($comparar == true) {
             return true;
         } else {
-            $legacyFirmado = $this->firmarArreglo($this->getArray());
+            $legacyArreglo = $this->getArray();
+            $legacyFirmado = $this->firmarArreglo($legacyArreglo);
             if ($this->compararFirmas($firma)) {
                 return true;
             } else {
@@ -167,16 +167,19 @@ class Transaccion {
     }
 
     /**
-     * Retorna las variables publicas del objeto.
+     * Retorna las variables publicas del objeto
+     * que comienzan con CT
      * @return type
      */
     function getVarsFromClass() {
 
         $variables = get_object_vars($this);
-        unset($variables["ct_token_secret"]);
-        unset($variables["ct_firma"]);
+        $variablesFiltrado = $this->getCTs($variables);
 
-        return $variables;
+        unset($variablesFiltrado["ct_token_secret"]);
+        unset($variablesFiltrado["ct_firma"]);
+
+        return $variablesFiltrado;
     }
 
     /**
